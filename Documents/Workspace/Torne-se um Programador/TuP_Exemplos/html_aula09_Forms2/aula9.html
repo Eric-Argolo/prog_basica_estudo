@@ -1,0 +1,104 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Aula 9 de HTML</title>
+	</head>
+	<body>
+		<h1>Aula de Forms</h1>
+		<form>
+			<fieldset> 
+				<legend>CADASTRE-SE</legend>
+					<label for="nome">Nome: </label> <!-- <label> aumenta a área clicável e melhora a acessibilidade, além de tornar o código mais semântico. -->
+					<input type="text" id="nome" name="nome" placeholder="Digite seu nome" maxlength="30"><br> 
+					<label for="sobrenome">Sobrenome:</label> <!-- for indica o input que será selecionado ao se clicar no label, isso de acordo com o id. -->
+					<input type="text" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome" maxlength="50"><br>
+					<label for="email">Email: </label>
+					<input type="email" id="email" name="email" placeholder="Digite seu email" required><br> <!-- required valida a presença de um valor neste campo. -->
+					<label for="senha">Senha: </label>
+					<input type="password" id="senha" name="senha" placeholder="Digite sua senha" maxlength="30" required><br> 
+					<label for="idade">Idade: </label>
+					<input type="number" id="idade" name="idade" placeholder="Digite sua idade" max="120"><br>
+			</fieldset><br>
+
+			<fieldset>
+				<legend>DADOS E ENDEREÇO</legend>
+				<label>Sexo: </label>
+				<input type="radio" name="sexo">Feminino <!-- As opções do radio devem ter mesmo name, do contrário mais de uma opção poderá ser marcada de uma vez.  -->
+				<input type="radio" name="sexo">Masculino<br>
+
+				<label>Data de nascimento:</label>
+				<input type="date" name="data_nascimento"><br>
+
+				<label for="cidade">Cidade: </label>
+				<input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade" maxlength="40" list="cidades"><br> <!-- list indica o datalist usado. -->
+				<datalist id="cidades">	<!-- Cria uma lista pré definida de options para um input, provendo uma funcionalidade "autocomplete". -->
+					<option value="Sao Paulo"></option>
+					<option value="Porto Alegre"></option>
+					<option value="Ilheus"></option>
+					<option value="Rio de Janeiro"></option>
+				</datalist>
+
+				<label for="estado">Estado: </label>
+				<input type="text" id="estado" name="estado" placeholder="Digite seu estado" maxlength="40" list="estados"><br>
+				<datalist id="estados">
+					<option value="Sao Paulo"></option>
+					<option value="Parana"></option>
+					<option value="Bahia"></option>
+					<option value="Rio de Janeiro"></option>
+				</datalist>
+			</fieldset><br>
+
+			<fieldset>
+				<legend>PREFERÊNCIAS SOBRE JOGOS</legend>		
+				<label>Console favorito: </label>
+				<select>
+					<optgroup label="Sony"> <!-- Permite agrupar opções do select e o atributo label nomeia este grupo. -->
+						<option value="ps4">PS4</option>
+					</optgroup>
+					<optgroup label="Microsoft">
+						<option value="xone">XBox One</option>
+					</optgroup>
+					<optgroup label="Nintendo">
+						<option value="switch" selected>Switch</option> <!-- selected garante que o option estará selecionado por padrão, mas ainda é possível escolher outro -->
+					</optgroup>
+				</select><br>
+
+				<label>Portátil favorito: </label>
+				<select>
+					<optgroup label="Nintendo">
+						<option value="ds">DS</option> <!-- value diz qual valor será passado através do form (e que depois pode vir a ser gravado num banco). -->
+						<option value="3ds" selected>3DS</option>
+					</optgroup>
+					<optgroup label="Sony">
+						<option value="psvita">PS Vita</option>
+					</select>
+				</select><br>
+
+				<label>Personagens favoritos: </label>
+				<input type="checkbox" name="personagens" value="link" selected>Link</option>	<!-- radio permique que mais de uma opção possa ser escolhida. -->
+				<input type="checkbox" name="personagens" value="kratos">Kratos</option>
+				<input type="checkbox" name="personagens" value="masterchief">Master Chief</option>
+							
+			</fieldset><br>
+
+			<fieldset>
+				<legend>ÁREA DE MENSAGEM</legend>
+				<label for="mensagem">Deixe sua mensagem no campo abaixo: </label><br>
+				<textarea name="mensagem" id="mensagem" cols="30" rows="5" placeholder="Sua mensagem aqui"></textarea>
+			</fieldset><br>
+
+			<fieldset>
+				<legend>OUTRAS INFORMAÇÕES</legend>
+				<label>Em qual horário do dia você pratica HTML?</label>				
+				<input type="time"><br> <!-- Seletor de horário (formato hh:mm)-->
+				<label>Qual é a sua cor favorita?</label>
+				<input type="color"><br> <!-- Abre paleta de cores para que uma seja selecionada. -->
+				<label>Avalie este exemplo de HTML: </label>
+				<input type="range" min="0" max="10" step="2"> <!-- Cria barra com valor entre min e max; step define tamanho dos intervalos (padrão 1). -->
+			</fieldset><br>
+
+			<button type="submit">ENVIAR</button>
+			<button type="reset">LIMPAR</button>
+		</form>
+	</body>
+</html>

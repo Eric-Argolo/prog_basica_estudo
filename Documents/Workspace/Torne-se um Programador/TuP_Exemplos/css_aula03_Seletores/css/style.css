@@ -1,0 +1,45 @@
+/* seletor universal */
+* {
+	color: red;
+	background: black;
+}
+
+/* seletor por tag*/
+h1 { 
+	color: white;
+}
+
+/* seletor por class */
+.texto_centralizado {
+	text-align: center;
+	background: white;
+}
+
+.fundo_colorido {
+	background: orange;
+}
+
+/* seletor por id */
+#conteudo {
+	background: green;
+	padding: 50px;
+}
+
+/* seletor por atributo */
+input[type="text"] {
+	background: grey;
+	padding: 10px;
+	border: none;
+}
+
+input[type="submit"] {
+	background: red;
+	color: white;
+	border: none;
+	padding: 10px;
+}
+
+a[href="http://www.torneseumprogramador.com.br/"] {
+	background: red;
+	color: white;
+}

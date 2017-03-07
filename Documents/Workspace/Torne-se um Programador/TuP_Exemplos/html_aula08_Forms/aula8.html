@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Aula 8 de HTML</title>
+	</head>
+	<body>
+		<h1>Aula de Forms</h1>
+		<form>
+			<fieldset> <!-- fieldset> agrupa elementos em comum de um form. -->
+				<legend>CADASTRE-SE</legend> <!-- <legend> nomeia o fieldset. -->
+					Nome: <input type="text" name="nome" placeholder="Digite seu nome" maxlength="30"><br> <!-- placeholder: dica sobre informação que deve ser digitada. -->
+					Sobrenome: <input type="text" name="sobrenome" placeholder="Digite seu sobrenome" maxlength="50"><br>
+					Email: <input type="email" name="email" placeholder="Digite seu email"><br> <!-- type="email" só aceita valores com formato de email (xxxx@xxxx.com). -->
+					Senha: <input type="password" name="senha" placeholder="Digite sua senha" maxlength="30"><br> <!-- type="password" cria máscara de senha no campo. -->
+					Idade:<input type="number" name="idade" placeholder="Digite sua idade" max="120"><br>
+			</fieldset>
+
+			<fieldset>
+				<legend>OUTRAS INFORMAÇÕES</legend>
+					Sexo:
+					Data de nascimento: 
+					Cidade:
+					Estado:
+			</fieldset>
+
+			<fieldset>
+				ESCOLHA SEUS CONSOLES FAVORITOS
+					PS4
+					XBox One
+					Switch
+
+				ESCOLHA SEUS PORTÁTEIS FAVORITOS
+					3DS
+					PS Vita
+			</fieldset>
+
+			Mensagem
+
+			BOTÃO ENVIAR
+		</form>
+	</body>
+</html>

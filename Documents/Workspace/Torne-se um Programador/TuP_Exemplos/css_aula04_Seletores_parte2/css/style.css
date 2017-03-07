@@ -1,0 +1,63 @@
+/* seletor universal */
+* {
+	
+}
+
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: arial;
+	background: black;
+	color: white;
+}
+
+/* Estilizando títulos */
+h1, h2 {
+	background: #414141;
+	padding: 10px;
+	text-align: center;
+}
+
+h3 {
+	background: black;
+	padding: 5px;
+}
+
+.noticias {
+	background: gray;
+	display: inline-block;
+	padding: 5px;
+}
+
+/* Seletor descendente */
+.noticias h3 {
+	background: black;
+	padding: 5px;
+}
+
+.mais_informacoes {
+	background: black;
+	padding: 5px;
+}
+
+.noticias > p {
+	background: red;
+}
+
+/* Seletores adjacentes */
+.noticias h3 + p {
+	background: blue;
+}
+
+/* negação no seletor */
+.mais_informacoes p:not(.nao_colorir) {
+	background: orange;
+}
+
+.noticias:hover {
+	background: yellow;
+	cursor: pointer;
+}
